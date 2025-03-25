@@ -1,0 +1,7 @@
+python main.py
+start chatbot - streamlit run main.py
+
+pip install faiss-cpu sentence-transformers faiss-gpu langchain-community  
+pip install streamlit sentence-transformers faiss-cpu owlready2 python-dotenv requests deepseek 
+ pip install streamlit torch langchain langchain-huggingface chromadb 
+ pip install -U langchain-huggingface   
