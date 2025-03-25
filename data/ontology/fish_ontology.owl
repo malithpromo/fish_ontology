@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="file://data\ontology\fish_ontology.owl"
+         xmlns="file://data\ontology\fish_ontology.owl#">
+
+<owl:Ontology rdf:about="file://data\ontology\fish_ontology.owl"/>
+
+<owl:ObjectProperty rdf:about="#is_related_to">
+  <rdfs:domain rdf:resource="#Fish"/>
+  <rdfs:range rdf:resource="#Fish"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#has_habitat">
+  <rdfs:domain rdf:resource="#Fish"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_diet">
+  <rdfs:domain rdf:resource="#Fish"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_conservation_status">
+  <rdfs:domain rdf:resource="#Fish"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Fish">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AtlanticSalmon">
+  <rdfs:subClassOf rdf:resource="#Fish"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#Atlantic_Salmon">
+  <rdf:type rdf:resource="#AtlanticSalmon"/>
+  <has_conservation_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Least Concern (globally), but many populations are declining</has_conservation_status>
+  <has_conservation_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Least Concern (globally), but many local populations are endangered or critically endangered</has_conservation_status>
+  <has_habitat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saltwater: North Atlantic Ocean, including coastal and open waters</has_habitat>
+  <has_habitat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Freshwater: Clean, cold, oxygen-rich rivers and streams with gravel bottoms</has_habitat>
+  <has_diet rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adults: Fish (herring, capelin, sand eels), crustaceans, squid</has_diet>
+  <has_diet rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juveniles: Aquatic invertebrates (insect larvae, crustaceans, small fish)</has_diet>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

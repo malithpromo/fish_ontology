@@ -1,0 +1,27 @@
+{
+  "taxonomy": {
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Actinopterygii",
+    "order": "Salmoniformes",
+    "family": "Salmonidae",
+    "genus": "Salmo",
+    "species": "Salmo salar"
+  },
+  "habitat": [
+    "North Atlantic Ocean",
+    "Coastal rivers in North America and Europe"
+  ],
+  "diet": [
+    "Smaller fish",
+    "Crustaceans",
+    "Aquatic insects",
+    "Squid"
+  ],
+  "conservation_status": "Vulnerable",
+  "physical_characteristics": {
+    "average_length": "70-130 cm",
+    "average_weight": "3.6-7.3 kg",
+    "color": "Blue-green back, silver sides and belly"
+  }
+}

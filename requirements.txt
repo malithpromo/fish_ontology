@@ -1,0 +1,8 @@
+# Existing requirements
+# ... (your previous requirements)
+
+# LLM Integration
+requests==2.31.0
+python-dotenv==1.0.0
+
+pip install streamlit sentence-transformers faiss-cpu owlready2 python-dotenv requests

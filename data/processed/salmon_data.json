@@ -1,0 +1,57 @@
+{
+    "taxonomy": {
+      "family": "Salmonidae",
+      "genus": "Salmo",
+      "species": "salar"
+    },
+    "physical_characteristics": {
+      "average_length": "70-75 cm",
+      "average_weight": "3.5-5.5 kg",
+      "coloration": "Silvery body with black spots primarily above the lateral line",
+      "distinctive_features": [
+        "Hooked jaw (kype) in spawning males",
+        "Black spots mainly above lateral line",
+        "Streamlined body"
+      ]
+    },
+    "habitat": [
+      "North Atlantic Ocean",
+      "Freshwater rivers and streams",
+      "Clean, well-oxygenated waters",
+      "Gravel-bottomed streams for spawning"
+    ],
+    "geographic_distribution": [
+      "North America (Connecticut to Quebec)",
+      "Iceland",
+      "Europe (Portugal to Russia)",
+      "Baltic Sea"
+    ],
+    "diet": [
+      "Crustaceans",
+      "Squid",
+      "Small fish (herring, sand lance)",
+      "Aquatic insects"
+    ],
+    "reproduction": {
+      "spawning_season": "Late autumn",
+      "eggs_per_female": "2,500-7,000",
+      "maturity_age": "1-4 years freshwater, 1-3 years marine"
+    },
+    "conservation_status": "Vulnerable",
+    "ecological_importance": [
+      "Key species in food webs",
+      "Transport marine nutrients to freshwater ecosystems",
+      "Environmental health indicator"
+    ],
+    "human_interactions": [
+      "Commercial fishery",
+      "Recreational fishing",
+      "Aquaculture",
+      "Cultural significance"
+    ],
+    "related_species": [
+      "Brown trout (Salmo trutta)",
+      "Pacific salmon (Oncorhynchus genus)",
+      "Arctic char (Salvelinus alpinus)"
+    ]
+  }
