@@ -1,12 +1,55 @@
 {
   "taxonomy": {
-    "species": "Atlantic Salmon"
+    "family": "Salmonidae",
+    "genus": "Salmo",
+    "species": "Salmo salar"
+  },
+  "physical_characteristics": {
+    "average_length": "70 to 150 cm",
+    "average_weight": "3.6 to 36 kg",
+    "coloration": {
+      "juveniles": "Dark vertical bars (parr marks) on a silvery background",
+      "adults_freshwater": "Olive-green to brown on the back, with silvery sides and a white belly",
+      "adults_saltwater": "Silvery with a blue-green back and scattered black spots, primarily above the lateral line"
+    },
+    "distinctive_features": [
+      "Streamlined and torpedo-shaped body",
+      "Single dorsal fin, adipose fin, and forked caudal fin",
+      "Large mouth with strong jaws and sharp teeth"
+    ]
   },
   "habitat": [
-    "Not specified"
+    "Freshwater: Clean, cold, oxygen-rich rivers and streams with gravel bottoms",
+    "Saltwater: North Atlantic Ocean, including coastal and open waters"
+  ],
+  "geographic_distribution": [
+    "North Atlantic Ocean and its tributaries",
+    "Coasts of North America (from Connecticut to northern Canada)",
+    "Coasts of Europe (from Portugal to northern Russia)",
+    "Landlocked populations in some lakes (e.g., Lake Ontario, Lake Ladoga)"
   ],
   "diet": [
-    "Not specified"
+    "Juveniles: Aquatic invertebrates (insect larvae, crustaceans, small fish)",
+    "Adults: Fish (herring, capelin, sand eels), crustaceans, squid"
   ],
-  "conservation_status": "Unknown"
+  "reproduction": {
+    "spawning_season": "Late autumn to early winter",
+    "eggs_per_female": "Not specified",
+    "maturity_age": "1\u20134 years in the ocean before returning to freshwater to spawn"
+  },
+  "conservation_status": "Least Concern (globally), but many populations are declining",
+  "ecological_importance": [
+    "Keystone species: Nutrient cycling by transporting marine-derived nutrients to freshwater ecosystems",
+    "Prey and predator: Serve as prey for marine mammals, birds, and larger fish; regulate populations of smaller fish and invertebrates",
+    "Indicator species: Reflect the overall condition of freshwater and marine ecosystems"
+  ],
+  "human_interactions": [
+    "Fisheries: Historically supported major commercial and recreational fisheries; now regulated due to overfishing",
+    "Aquaculture: One of the most farmed fish species globally; concerns include environmental impacts and genetic dilution",
+    "Cultural significance: Valued as a food source and symbol in many cultures"
+  ],
+  "related_species": [
+    "Pacific Salmon (Oncorhynchus spp.): Includes Chinook, coho, and sockeye salmon; most die after spawning",
+    "Brown Trout (Salmo trutta): Close relative, less migratory, more pronounced black and red spots"
+  ]
 }

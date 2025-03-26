@@ -10,28 +10,22 @@ class RagSystem:
         # Initialize sentence transformer model for embeddings
         self.model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
         
-        # Predefined knowledge about Atlantic Salmon
-        self.atlantic_salmon_data = {
+        # Predefined knowledge about Bulath Hapaya
+        self.bulath_hapaya_data = {
             "taxonomy": {
-                "kingdom": "Animalia",
-                "phylum": "Chordata",
-                "class": "Actinopterygii",
-                "order": "Salmoniformes",
-                "family": "Salmonidae",
-                "genus": "Salmo",
-                "species": "Salmo salar"
+                "order": "Cypriniformes",
+                "family": "Cyprinidae",
+                "subfamily": "Smiliogastrinae",
+                "genus": "Pethia",
+                "species": "Pethia nigrofasciata"
             },
-            "habitat": [
-                "North Atlantic Ocean",
-                "Rivers and streams in North America and Europe"
-            ],
-            "diet": [
-                "Smaller fish",
-                "Crustaceans",
-                "Insects",
-                "Squid"
-            ],
-            "conservation_status": "Vulnerable"
+            "common_names": ["Sri Lanka Black Ruby Barb", "Black Ruby Barb"],
+            "appearance": "Dorsally olive green, becoming lighter with a reddish-orange tint. Three black vertical bands. Males exhibit bright red coloration.",
+            "habitat": "Clear, cool, shady streams in forested areas. Found in pools of quiet water in clear streams and rivers.",
+            "diet": "Feeds mainly on filamentous algae and detritus.",
+            "conservation_status": "Vulnerable (VU), assessed on 07 August 2019.",
+            "distribution": "Sri Lanka - Lowland wet zone from Kelani to Nilwala basins. Population in Ginigathena (Mahaweli River Basin) is translocated.",
+            "aquarium_trade": "Highly commercial. Popular aquarium fish. Among top five exported endemic species in Sri Lanka."
         }
         
         # Initialize vector store
@@ -68,33 +62,27 @@ class RagSystem:
         Returns:
             str: Relevant information about the query
         """
-        # Convert query to lowercase for consistent matching
         user_query = user_query.lower()
         
-        # Check for taxonomy-related queries
-        if any(tax_term in user_query for tax_term in ["taxonomy", "classification", "species", "scientific name"]):
-            taxonomy_response = "Atlantic Salmon (Salmo salar) Taxonomy:\n"
-            for rank, name in self.atlantic_salmon_data['taxonomy'].items():
-                taxonomy_response += f"- {rank.capitalize()}: {name}\n"
-            return taxonomy_response
+        if any(term in user_query for term in ["taxonomy", "classification", "species", "scientific name"]):
+            response = "Bulath Hapaya (Pethia nigrofasciata) Taxonomy:\n"
+            for rank, name in self.bulath_hapaya_data['taxonomy'].items():
+                response += f"- {rank.capitalize()}: {name}\n"
+            return response
         
-        # Check for habitat-related queries
-        if any(hab_term in user_query for hab_term in ["habitat", "live", "environment"]):
-            habitat_response = "Atlantic Salmon Habitats:\n"
-            for habitat in self.atlantic_salmon_data['habitat']:
-                habitat_response += f"- {habitat}\n"
-            return habitat_response
+        if any(term in user_query for term in ["habitat", "live", "environment"]):
+            return f"Bulath Hapaya Habitat:\n- {self.bulath_hapaya_data['habitat']}"
         
-        # Check for diet-related queries
-        if any(diet_term in user_query for diet_term in ["diet", "eat", "food"]):
-            diet_response = "Atlantic Salmon Diet:\n"
-            for food in self.atlantic_salmon_data['diet']:
-                diet_response += f"- {food}\n"
-            return diet_response
+        if any(term in user_query for term in ["diet", "eat", "food"]):
+            return f"Bulath Hapaya Diet:\n- {self.bulath_hapaya_data['diet']}"
         
-        # Check for conservation status queries
-        if any(cons_term in user_query for cons_term in ["conservation", "status", "endangered"]):
-            return f"Conservation Status: {self.atlantic_salmon_data['conservation_status']}"
+        if any(term in user_query for term in ["conservation", "status", "endangered"]):
+            return f"Conservation Status: {self.bulath_hapaya_data['conservation_status']}"
         
-        # Default response if no specific information is found
-        return "I apologize, but I couldn't find specific information matching your query about Atlantic Salmon."
+        if any(term in user_query for term in ["distribution", "location", "found"]):
+            return f"Bulath Hapaya Distribution:\n- {self.bulath_hapaya_data['distribution']}"
+        
+        if any(term in user_query for term in ["aquarium", "trade", "commercial"]):
+            return f"Bulath Hapaya in Aquarium Trade:\n- {self.bulath_hapaya_data['aquarium_trade']}"
+        
+        return "I couldn't find specific information matching your query about Bulath Hapaya."

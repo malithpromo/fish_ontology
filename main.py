@@ -28,15 +28,15 @@ def prepare_fish_knowledge():
     enhancer = FishKnowledgeEnhancer()
     
     # Add detailed knowledge about Atlantic Salmon
-    st.write("### Adding detailed knowledge about Atlantic Salmon...")
+    st.write("### Connecting Fish knowledge Base...")
     salmon_data = enhancer.add_fish_knowledge("Atlantic Salmon")
     
     # Display extracted structured data
-    st.write("\n#### Structured data extracted:")
-    st.write(f"**Taxonomy:** {salmon_data['taxonomy']}")
-    st.write(f"**Habitats:** {salmon_data['habitat']}")
-    st.write(f"**Diet:** {salmon_data['diet']}")
-    st.write(f"**Conservation status:** {salmon_data['conservation_status']}")
+    # st.write("\n#### Structured data extracted:")
+    # st.write(f"**Taxonomy:** {salmon_data['taxonomy']}")
+    # st.write(f"**Habitats:** {salmon_data['habitat']}")
+    # st.write(f"**Diet:** {salmon_data['diet']}")
+    # st.write(f"**Conservation status:** {salmon_data['conservation_status']}")
     
     return salmon_data
 
